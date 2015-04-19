@@ -1,7 +1,7 @@
 # Reproducible Research: Peer Assessment 1
 *by Serdar Muslu*
 
-For this assignment, we will be performing an exploratory analysis on "activity monitoring data" provided on the course web site, also as part of the repository shared as part of the assignment.  The analysis is driven by the questions presented on the "Peer Assessment 1" readme document.
+For this assignment, we will be performing an exploratory analysis on "activity monitoring data" provided on the course web site, and also as part of the repository shared as part of the assignment.  The analysis is driven by the questions presented on the "Peer Assessment 1" readme document.
 
 
 ## 1. Loading and preprocessing the data
@@ -45,7 +45,7 @@ summary(df)
 
 ## 2. What is mean total number of steps taken per day?  
 Let's create an array of the total number of steps taken each day using the `tapply` function.  We will use this to view the relative frequencies of the total number of daily steps during the course of the 61-day data collection time frame.  We will do this by plotting a histogram.  
-For this part, we will ignore the missing values in the dataset (in other words, the NA's will be treated as 0).  
+For this part, we will ignore the missing values in the dataset.  
 
 ```r
 dailySteps <- with(df, tapply(steps, date, sum, na.rm=T))
@@ -71,8 +71,6 @@ median(dailySteps)
 ```
 ## [1] 10395
 ```
-
-Most frequent daily sum is at the *0 to 500 steps* point hinting at a good number of NA measurements.  Because of this we can see that the mean is lower than the median indicating a pull towards 0/NA. 
 
 
 ## 3. What is the average daily activity pattern?
@@ -143,7 +141,7 @@ sum(is.na(impDF))
 ```
 
 ***
-Great!  Next step is replicating the analysis in the second section of the assignment with the imputed data:
+Great!  The next step is replicating the analysis in the second section of the assignment with the imputed data:
 
 ```r
 impDailySteps <- with(impDF, tapply(steps, date, sum))
