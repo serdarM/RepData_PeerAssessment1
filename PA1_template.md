@@ -52,7 +52,7 @@ dailySteps <- with(df, tapply(steps, date, sum, na.rm=T))
 hist(dailySteps, breaks=50)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![](PA1_template_files/figure-html/DailySteps-1.png) 
 
 The **mean** and the **median** for the total number of steps taken per day are:
 
@@ -88,7 +88,7 @@ intvlSteps <- with(df, tapply(steps, interval, mean, na.rm=T))
 plot(intvlSteps, type="l")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
+![](PA1_template_files/figure-html/ActivityPattern-1.png) 
   
 Here, the points on the x-axis represent the indices for each 5-minute interval starting from *0 for 00:00* to *288 for 23:55 (or 11:55pm)*, while the y-axis represents the number of steps for that interval averaged across the full 61-day period that the dataset covers.
   
@@ -150,7 +150,7 @@ impDailySteps <- with(impDF, tapply(steps, date, sum))
 hist(impDailySteps, breaks=50)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
+![](PA1_template_files/figure-html/DailySteps_Clean-1.png) 
   
 
 And the new **mean** and the new **median** for the total number of steps taken per day are:
@@ -211,7 +211,7 @@ print(pxd, position=c(0, .5, 1, 1), more=TRUE)
 print(pxe, position=c(0, 0, 1, .5))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
+![](PA1_template_files/figure-html/WeekdayVsWeekend-1.png) 
 
 Our subject seems to be more active on the weekends even though the activity starts a bit later in the day.
 ***

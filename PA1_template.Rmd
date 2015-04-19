@@ -126,7 +126,7 @@ table(impDF$daytype)
 ```
 
 Now, let's split the data into weekday and weekend based on this variable, and repeat our analysis in Section 3.  This time, we will end up with two plots: one for the weekday subset and the other for the weekend.
-```{r Weekday vs Weekend}
+```{r WeekdayVsWeekend}
 wd <- subset(impDF, daytype == "weekday")
 we <- subset(impDF, daytype == "weekend")
 
